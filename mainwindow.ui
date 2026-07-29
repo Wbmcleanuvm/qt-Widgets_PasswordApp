@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Base Dialog background */
+QDialog {
+    background-color: #1e1e24;
+    color: #f0f0f0;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+	background: repeating-linear-gradient(45deg, yellow, yellow 10px, #222 10px, #222 20px);
+}
+
+/* Generic Label text */
+QLabel {
+   font-family: &quot;Geist Pixel Square&quot;;
+	font-size: 10px;
+}
+
+/* Input Fields (Line Edits, Text Edits) */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #2a2a32;
+    color: #ffffff;
+    border: 1px solid #3d3d4c;
+    border-radius: 4px;
+    padding: 6px 10px;
+    selection-background-color: #007acc;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 1px solid #007acc;
+    background-color: #2d2d38;
+}
+
+/* Buttons (Standard Actions) */
+QPushButton {
+    background-color: #3a3a46;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #4a4a58;
+}
+
+QPushButton:pressed {
+    background-color: #2a2a34;
+}
+
+/* Accent Button (e.g., Save, Submit, OK) */
+QPushButton#okButton, QPushButton[primary=&quot;true&quot;] {
+    background-color: #007acc;
+}
+
+QPushButton#okButton:hover, QPushButton[primary=&quot;true&quot;]:hover {
+    background-color: #1c94e0;
+}
+
+/* Combo Boxes (Dropdowns) */
+QComboBox {
+    background-color: #2a2a32;
+    border: 1px solid #3d3d4c;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #ffffff;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 0px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2a2a32;
+    border: 1px solid #3d3d4c;
+    selection-background-color: #007acc;
+    color: #ffffff;
+}
+
+/* Checkboxes and Radio Buttons */
+QCheckBox, QRadioButton {
+    spacing: 8px;
+    color: #e0e0e0;
+}
+
+QCheckBox::indicator, QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid #3d3d4c;
+    background-color: #2a2a32;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #007acc;
+    border: 1px solid #007acc;
+    /* Tip: You can supply an image asset path here if needed */
+    /* image: url(:/icons/checkmark.png); */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
