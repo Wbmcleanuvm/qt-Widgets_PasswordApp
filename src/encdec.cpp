@@ -32,7 +32,6 @@ namespace Encdec
 
     std::string decrypt(const std::vector<unsigned char>& ciphertext, const std::string& key, const unsigned char* iv)
     {
-
         EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
 
         EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr,

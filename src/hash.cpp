@@ -146,7 +146,6 @@ namespace Hash {
         }
         return salt;
     }
-    //
     std::string pbkdf2_sha2(std::string passcode,std::string salt, int iterations)
     {
         std::string hash = sha_2(passcode + salt);

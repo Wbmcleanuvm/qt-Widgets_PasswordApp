@@ -1,7 +1,7 @@
-#include "mainwindow.h"
-#include "newmaster.h"
+#include "widgets/mainwindow.h"
+#include "widgets/newmaster.h"
 #include "src/vault.h"
-#include "login.h"
+#include "widgets/login.h"
 #include <QApplication>
 #include <QFile>
 #include <QFontDatabase>

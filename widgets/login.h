@@ -18,6 +18,7 @@ public:
 
 private slots:
     void on_Submit_clicked();
+    //toggles visibility on password
     void onIconClicked(bool isVisible);
 
 private:

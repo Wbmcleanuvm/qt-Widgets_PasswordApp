@@ -35,15 +35,17 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Password_proj
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        newmaster.h newmaster.cpp newmaster.ui
-        login.h login.cpp login.ui
-        mainwindow.h mainwindow.cpp mainwindow.ui
-        addpassword.h addpassword.cpp addpassword.ui
+
+        # newmaster.h newmaster.cpp newmaster.ui
+        # login.h login.cpp login.ui
+        # mainwindow.h mainwindow.cpp mainwindow.ui
+        # addpassword.h addpassword.cpp addpassword.ui
         resources.qrc
-        confirmdelete.h confirmdelete.cpp confirmdelete.ui
+        # confirmdelete.h confirmdelete.cpp confirmdelete.ui
 
         fonts/IBMPlexMono-SemiBold.ttf
-        denypass.h denypass.cpp denypass.ui
+        widgets/addpassword.cpp widgets/addpassword.h widgets/addpassword.ui widgets/confirmdelete.cpp widgets/confirmdelete.h widgets/confirmdelete.ui widgets/createmaster.cpp widgets/createmaster.h widgets/denypass.cpp widgets/denypass.h widgets/denypass.ui widgets/login.cpp widgets/login.h widgets/login.ui widgets/mainwindow.cpp widgets/mainwindow.h widgets/mainwindow.ui widgets/newmaster.cpp widgets/newmaster.h widgets/newmaster.ui widgets/nopass.cpp widgets/nopass.h widgets/nopass.ui
+        #denypass.h denypass.cpp denypass.ui
 
     )
 #fonts
