@@ -10,6 +10,5 @@ database. The encryption and decryption utilizes OpenSSL's AES_256 function alon
 > This lightweight password database is perfect for any desktop, it guarantees safety and that your passwords won't be shared anywhere without your doing so. Along with this the ui is very slick and easy to navigate on the go.
 ### Installation
 > Currently, there is only a Windows installer but since this app is mostly c++ a apple installer could easily be made aswell
-> 
 > Installation link https://drive.google.com/file/d/11mWO3c2IgwnexFm4J_52NRuJj72osDC-/view?usp=sharing
 
