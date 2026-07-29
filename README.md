@@ -1,2 +1,11 @@
-# qt-Widgets_PasswordApp
-Add on to original password cli storage app utilizing qt widgets for more unique interaction.
+# Qt widgets Password Storage project
+
+### Languages used
+* c++
+### Safety
+>This project features a non-api hard coded implementation of the PBKDF2-SHA256 hashing algorithm which is used along with a salt generated from OpenSSL's random function to safely store the users master password which in turn unlocks the users other inputted passwords. All passwords entered by the user are encrypted and stored in an Sqlite3
+database. The encryption and decryption utilizes OpenSSL's AES_256 function along with the users master key as the function key.
+
+### Features
+> This lightweight password database is perfect for any desktop, it guarantees safety and that your passwords won't be shared anywhere without your doing so. Along with this the ui is very slick and easy to navigate on the go.
+
