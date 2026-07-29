@@ -12,10 +12,9 @@ class QLineEdit;
 class QPushButton;
 class QModelIndex;
 
-// Custom roles for the extra fields stashed on each QStandardItem.
-// Qt::DisplayRole (the item text) holds the site name, which is what
-// QListView shows in the row.
-enum ConnectionRole {
+
+enum ConnectionRole
+{
     UsernameRole = Qt::UserRole + 1,
     PasswordRole
 };

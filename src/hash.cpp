@@ -11,14 +11,18 @@
 #include <openssl/evp.h>   // for hashing/encryption
 #include <openssl/rand.h>  // for random numbers
 
+
 namespace Hash {
-    uint32_t rightrotate(uint32_t x, int n){
+    uint32_t rightrotate(uint32_t x, int n)
+    {
         return (x >> n) | (x << (32 - n));
     }
-    std::string sha_2(std::string input){
+    std::string sha_2(std::string input)
+    {
         std::string digest = "";
         //init hash values
-        std::vector<uint32_t> hashVals = {
+        std::vector<uint32_t> hashVals =
+        {
             0x6a09e667, // a -> h0
             0xbb67ae85, // b -> h1
             0x3c6ef372, // c -> h2
@@ -30,7 +34,8 @@ namespace Hash {
         };
         //copy of hashVals vec before modification
         std::vector<uint32_t> hashVals_h = hashVals;
-        std::vector<uint32_t> const roundConsts{
+        std::vector<uint32_t> const roundConsts
+        {
             0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
             0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
             0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da,
@@ -128,7 +133,8 @@ namespace Hash {
         return digest;
 
     }
-    std::string generateSalt(int length) {
+    std::string generateSalt(int length)
+    {
         unsigned char buf[length];
 
         // Convert to hex string
@@ -140,9 +146,12 @@ namespace Hash {
         }
         return salt;
     }
-    std::string pkdf2_sha2(std::string passcode,std::string salt, int iterations) {
+    //
+    std::string pbkdf2_sha2(std::string passcode,std::string salt, int iterations)
+    {
         std::string hash = sha_2(passcode + salt);
-        for (int i = 1; i < iterations; i++) {
+        for (int i = 1; i < iterations; i++)
+        {
             hash = sha_2(hash);
         }
         return hash;

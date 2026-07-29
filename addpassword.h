@@ -4,7 +4,8 @@
 #include <QDialog>
 #include "vault.h"
 
-namespace Ui {
+namespace Ui
+{
 class AddPassword;
 }
 
@@ -17,6 +18,7 @@ public:
     ~AddPassword();
 
 private slots:
+    //adds password, to database, only works if username and sitename are unique
     void on_submitButton_clicked();
 
 private:

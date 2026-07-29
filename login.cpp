@@ -10,23 +10,20 @@ Login::Login(Vault &v, QWidget *parent)
 {
     ui->setupUi(this);
     setUi();
-    // ui->viewPw->setIcon(QIcon(":/icons/icons/eyeOpenIcon.svg"));
-    // ui->viewPw->setIconSize(QSize(10, 10));
-    // ui->viewPw->setFixedSize(30, 30);
-    // ui->viewPw->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-
 }
 
 Login::~Login()
 {
     delete ui;
 }
-void Login::onIconClicked(bool isVisible){
+void Login::onIconClicked(bool isVisible)
+{
     ui->pwEnter->setEchoMode(isVisible ? QLineEdit::Normal : QLineEdit::Password);
     iconAction->setIcon(QIcon(isVisible ? ":/icons/icons/eyeClosedIcon.svg" : ":/icons/icons/eyeOpenIcon.svg"));
 }
 
-void Login::setUi(){
+void Login::setUi()
+{
     //setWindowFlags(Qt::FramelessWindowHint);
     setWindowTitle("Login");
     ui->pwEnter->setPlaceholderText("Password");

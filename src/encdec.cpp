@@ -6,8 +6,10 @@
 #include <openssl/evp.h>
 #include <string>
 #include <vector>
-namespace Encdec {
-    std::vector<unsigned char> encrypt(const std::string& plaintext, const std::string& key, const unsigned char* iv) {
+namespace Encdec
+{
+    std::vector<unsigned char> encrypt(const std::string& plaintext, const std::string& key, const unsigned char* iv)
+    {
         EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
 
         EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr,
@@ -28,7 +30,9 @@ namespace Encdec {
         return ciphertext;
     }
 
-    std::string decrypt(const std::vector<unsigned char>& ciphertext, const std::string& key, const unsigned char* iv) {
+    std::string decrypt(const std::vector<unsigned char>& ciphertext, const std::string& key, const unsigned char* iv)
+    {
+
         EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
 
         EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr,

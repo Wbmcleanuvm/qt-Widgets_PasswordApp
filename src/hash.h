@@ -7,8 +7,9 @@
 #include <string>
 #include <string>
 #include <cstdint>
-
-namespace Hash {
+//this implementation of sha256 is based off the psuedocode from https://en.wikipedia.org/wiki/Secure_Hash_Algorithms
+namespace Hash
+{
 
     //Sha2 hashing algorithm, takes a password or input and transforms it into a hash
     std::string sha_2(std::string input);
@@ -18,8 +19,8 @@ namespace Hash {
     //Helper function to generate salt for pkdf2
     std::string generateSalt(int length);
 
-    // uses pkdf2 on a sha2 to make hash unrecognizable less susceptible to brute force attacks Hashes for specified iterations
-    std::string pkdf2_sha2(std::string passcode,std::string salt, int iterations);
+    // uses pkbdf2 on a sha2 to make hash unrecognizable less susceptible to brute force attacks Hashes for specified iterations
+    std::string pbkdf2_sha2(std::string passcode,std::string salt, int iterations);
 
 
 };
